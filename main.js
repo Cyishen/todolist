@@ -20,11 +20,11 @@ newTodoForm.addEventListener('submit', function(e) {
     e.target.content.focus();
 
     DisplayTodos();
-    // createTask(todo);
+
 });
 
 DisplayTodos();
-// createTask(todo);
+
 
 function DisplayTodos () {
     todoList.innerHTML = '';
@@ -116,67 +116,4 @@ function DisplayTodos () {
 
     });
 
-}
-
-
-function createTask(todo) {
-
-    // todoList.innerHTML = '';
-
-    const todoItem = document.createElement('div');
-
-    todoItem.setAttribute('createdAt', todo.createdAt)
-
-
-
-    const taskElement = `
-    <div class="todo-item">
-        <label>
-            <input type="checkbox" />
-            <span>${todo.category}</span>
-        </label>
-
-        <div class="todo-content">
-            <input type="text" value="${todo.content}" />
-        </div>
-
-        <div class="actions">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-        </div>
-    </div>
-    `;
-
-    // edit.innerHTML = 'Edit';
-    // deleteButton.innerHTML = 'Delete';
-
-    // input.type = 'checkbox';
-    // input.checked = todo.done;
-
-    // if (todo.done) {
-    //     todoItem.classList.add('done');
-    // }
-
-    // if (todo.category == 'personal') {
-    //     span.classList.add('personal');
-    // } else {
-    //     span.classList.add('business');
-    // }
-
-    // input.addEventListener('click', function (e) {
-    //     todo.done = e.target.checked;
-    //     localStorage.setItem('todos', JSON.stringify(todos));
-        
-    //     if (todo.done) {
-    //         todoItem.classList.add('done');
-    //     } else {
-    //         todoItem.classList.remove('done');
-    //     }
-        
-    //     createTask(todo);
-    // })
-
-    todoItem.innerHTML = taskElement;
-
-    todoList.appendChild(todoItem);
 }
