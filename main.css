@@ -1,0 +1,188 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: rgba(55, 28, 231, 0.6);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 1000px;
+    background-color: rgba(55, 28, 231, 0.3);
+    padding-bottom: 10px;
+}
+
+
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+img {
+    position: relative;
+    left: 5%;
+    margin-top: 40px;
+}  
+
+.spin-me {
+    animation: spin-me-right-round 12s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes spin-me-right-round {
+    to {
+    transform: rotate(1turn);
+    }
+}
+
+h2, h3, h4 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.create-todo input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.create-todo .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-todo .options .business:hover {
+    background-color: rgb(191, 191, 238);
+    color: #fff;
+    font-weight: bold;
+}
+
+.create-todo .options .personal:hover {
+    background-color: rgb(236, 136, 184);
+    color: #fff;
+    font-weight: bold;
+}
+
+.create-todo .options label div {
+    margin: 10px;
+}
+
+.create-todo input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-todo input[type="submit"]:hover {
+    opacity: 0.6;
+}
+
+/* todoList */
+.todo-list .list {
+    margin: 10px 0;
+    
+}
+.todo-list [type="text"]:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 5px;
+    /* padding: 1px; */
+}
+
+.todo-list .todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
+} 
+
+.todo-item label {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.todo-item .todo-content {
+    flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+    font-size: 30px;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+.todo-item .actions {
+    display: flex;
+    align-items: center;
+}
+
+.todo-item .actions button {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+    opacity: 0.6;
+}
+
+.todo-item .actions .edit {
+    margin-right: 10px;
+    background-color: black;
+    color: #fff;
+}
+
+.todo-item .actions .delete {
+    background-color: rgb(255, 0, 132);
+    color: #fff;
+}
+
+.todo-item.done .todo-content input {
+    text-decoration: line-through;
+    color: grey;
+}
